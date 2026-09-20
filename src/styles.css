@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+* { box-sizing: border-box; }
+
+.login-screen {
+  position: fixed; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(74,124,89,0.16), transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(201,138,59,0.16), transparent 45%),
+    #F7F3EA;
+  font-family: 'IBM Plex Sans', sans-serif;
+  padding: 20px;
+  z-index: 100;
+}
+.login-card {
+  width: 380px;
+  max-width: 100%;
+  background: #FFFFFF;
+  border: 1px solid #E3DCC8;
+  border-radius: 16px;
+  padding: 34px 32px 28px;
+  box-shadow: 0 20px 50px rgba(61,43,31,0.12);
+}
+.login-brand { text-align: center; margin-bottom: 26px; }
+.login-logo {
+  width: 56px; height: 56px; margin: 0 auto 12px;
+  background: #F3E4C8;
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+}
+.login-brand-name { font-family: 'Fraunces', serif; font-weight: 700; font-size: 21px; color: #3D2B1F; }
+.login-brand-sub { font-size: 12px; color: #6B6455; margin-top: 3px; letter-spacing: 0.02em; }
+.login-field { margin-bottom: 15px; }
+.login-field label { display: block; font-size: 11.5px; font-weight: 600; color: #6B6455; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 6px; }
+.login-field input {
+  width: 100%; font-family: 'IBM Plex Sans', sans-serif;
+  border: 1px solid #E3DCC8; background: #F7F3EA;
+  border-radius: 8px; padding: 11px 13px; font-size: 14px; color: #2B2B22;
+  transition: border-color 0.15s, background 0.15s;
+}
+.login-field input:focus { outline: none; border-color: #4A7C59; background: #FFFFFF; }
+.login-error {
+  background: #F6E2DC; color: #B5482F; font-size: 12.5px;
+  padding: 9px 12px; border-radius: 7px; margin-bottom: 14px;
+}
+.login-btn {
+  width: 100%; background: #4A7C59; color: #fff; border: none;
+  padding: 12px; border-radius: 8px; font-size: 14.5px; font-weight: 600;
+  cursor: pointer; margin-top: 4px; transition: background 0.15s;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+.login-btn:hover { background: #365F44; }
+.login-btn:disabled { opacity: 0.7; cursor: default; }
+.login-foot { text-align: center; font-size: 11px; color: #A79E88; margin-top: 18px; }
+
+#krushi-root {
+  --soil: #3D2B1F;
+  --soil-light: #5A4433;
+  --leaf: #4A7C59;
+  --leaf-dark: #365F44;
+  --leaf-pale: #E7EFE7;
+  --wheat: #C98A3B;
+  --wheat-pale: #F3E4C8;
+  --rust: #B5482F;
+  --rust-pale: #F6E2DC;
+  --paper: #F7F3EA;
+  --surface: #FFFFFF;
+  --ink: #2B2B22;
+  --ink-soft: #6B6455;
+  --border: #E3DCC8;
+
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  min-height: 640px;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 3px rgba(61,43,31,0.08);
+}
+
+#krushi-root .display { font-family: 'Fraunces', serif; }
+#krushi-root .mono { font-family: 'IBM Plex Mono', monospace; }
+
+/* Sidebar */
+#krushi-root .sidebar {
+  width: 210px;
+  flex-shrink: 0;
+  background: var(--soil);
+  color: #EFE7D8;
+  display: flex;
+  flex-direction: column;
+  padding: 22px 14px;
+}
+#krushi-root .brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 6px 20px 6px;
+  border-bottom: 1px solid rgba(239,231,216,0.15);
+  margin-bottom: 16px;
+}
+#krushi-root .brand svg { flex-shrink: 0; }
+#krushi-root .brand-text { font-family: 'Fraunces', serif; font-weight: 700; font-size: 17px; line-height: 1.15; }
+#krushi-root .brand-sub { font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #C9BDA0; }
+
+#krushi-root .nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 7px;
+  font-size: 13.5px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #D8CFB8;
+  margin-bottom: 2px;
+  transition: background 0.15s;
+  user-select: none;
+}
+#krushi-root .nav-item:hover { background: rgba(239,231,216,0.08); color: #F7F3EA; }
+#krushi-root .nav-item.active { background: var(--leaf); color: #fff; }
+#krushi-root .nav-item svg { flex-shrink: 0; opacity: 0.9; }
+
+#krushi-root .sidebar-foot {
+  margin-top: auto;
+  font-size: 10.5px;
+  color: #9C917A;
+  padding: 10px 6px 0 6px;
+  border-top: 1px solid rgba(239,231,216,0.15);
+  line-height: 1.5;
+}
+
+/* Company / account switcher (Instagram-style) */
+#krushi-root .brand { cursor: pointer; position: relative; user-select: none; }
+#krushi-root .brand:hover { background: rgba(239,231,216,0.06); border-radius: 8px; }
+#krushi-root .brand-chevron { margin-left: auto; opacity: 0.6; flex-shrink: 0; transition: transform 0.15s; }
+#krushi-root .brand-chevron.open { transform: rotate(180deg); }
+#krushi-root .switcher-panel {
+  position: absolute; top: 100%; left: 8px; right: 8px; margin-top: 6px;
+  background: #4A3A2A; border: 1px solid rgba(239,231,216,0.18); border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  z-index: 40; overflow: hidden; display: none;
+}
+#krushi-root .switcher-panel.open { display: block; }
+#krushi-root .switcher-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 12px; cursor: pointer; color: #EFE7D8; font-size: 13px;
+}
+#krushi-root .switcher-item:hover { background: rgba(239,231,216,0.08); }
+#krushi-root .switcher-avatar {
+  width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0;
+  background: var(--wheat); color: #3D2B1F; font-weight: 700; font-size: 12px;
+  display: flex; align-items: center; justify-content: center; overflow: hidden;
+  font-family: 'Fraunces', serif;
+}
+#krushi-root .switcher-avatar img { width: 100%; height: 100%; object-fit: cover; }
+#krushi-root .switcher-name { flex: 1; line-height: 1.3; }
+#krushi-root .switcher-name .s-sub { font-size: 10.5px; color: #C9BDA0; }
+#krushi-root .switcher-check { color: var(--leaf); flex-shrink: 0; }
+#krushi-root .switcher-divider { border-top: 1px solid rgba(239,231,216,0.15); margin: 2px 0; }
+#krushi-root .switcher-add {
+  display: flex; align-items: center; gap: 10px; padding: 11px 12px;
+  cursor: pointer; color: #F3E4C8; font-size: 13px; font-weight: 600;
+}
+#krushi-root .switcher-add:hover { background: rgba(239,231,216,0.08); }
+#krushi-root .switcher-add .plus-circle {
+  width: 28px; height: 28px; border-radius: 50%; border: 1.5px dashed #C9BDA0;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+
+/* Main */
+#krushi-root .main { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+#krushi-root .topbar {
+  padding: 18px 26px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  background: var(--surface);
+}
+#krushi-root .topbar h1 { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 600; margin: 0; }
+#krushi-root .topbar .sub { font-size: 12px; color: var(--ink-soft); }
+#krushi-root .content { padding: 22px 26px; overflow-y: auto; flex: 1; }
+
+/* Cards / grid */
+#krushi-root .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 22px; }
+#krushi-root .stat-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 9px;
+  padding: 14px 16px; position: relative; overflow: hidden;
+}
+#krushi-root .stat-card .stat-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-soft); margin-bottom: 6px; }
+#krushi-root .stat-card .stat-val { font-family: 'Fraunces', serif; font-size: 24px; font-weight: 600; }
+#krushi-root .stat-card.alert { border-color: var(--rust); background: var(--rust-pale); }
+#krushi-root .stat-card.alert .stat-val { color: var(--rust); }
+#krushi-root .stat-card.leaf-accent { border-left: 3px solid var(--leaf); }
+
+#krushi-root .panel { background: var(--surface); border: 1px solid var(--border); border-radius: 9px; padding: 18px 20px; margin-bottom: 18px; }
+#krushi-root .panel h2 { font-family: 'Fraunces', serif; font-size: 15px; font-weight: 600; margin: 0 0 12px 0; display: flex; align-items: center; justify-content: space-between; }
+#krushi-root .panel h2 .count-badge { font-family: 'IBM Plex Sans'; font-size: 11px; font-weight: 500; color: var(--ink-soft); background: var(--paper); padding: 2px 8px; border-radius: 20px; }
+
+#krushi-root table { width: 100%; border-collapse: collapse; font-size: 13px; }
+#krushi-root th { text-align: left; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-soft); padding: 8px 10px; border-bottom: 1px solid var(--border); font-weight: 600; }
+#krushi-root td { padding: 9px 10px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+#krushi-root tr:last-child td { border-bottom: none; }
+#krushi-root .empty-row td { text-align: center; color: var(--ink-soft); padding: 26px 10px; font-style: italic; }
+#krushi-root th.num, #krushi-root td.num { text-align: right; }
+
+#krushi-root .tag { display: inline-block; font-size: 10.5px; padding: 2px 8px; border-radius: 20px; font-weight: 600; }
+#krushi-root .tag.low { background: var(--rust-pale); color: var(--rust); }
+#krushi-root .tag.ok { background: var(--leaf-pale); color: var(--leaf-dark); }
+
+#krushi-root button { font-family: 'IBM Plex Sans', sans-serif; cursor: pointer; border: none; }
+#krushi-root .btn-primary { background: var(--leaf); color: #fff; padding: 9px 16px; border-radius: 7px; font-size: 13px; font-weight: 600; }
+#krushi-root .btn-primary:hover { background: var(--leaf-dark); }
+#krushi-root .btn-secondary { background: var(--paper); border: 1px solid var(--border) !important; color: var(--ink); padding: 8px 14px; border-radius: 7px; font-size: 12.5px; font-weight: 500; }
+#krushi-root .btn-secondary:hover { background: var(--wheat-pale); }
+#krushi-root .btn-ghost { background: transparent; color: var(--ink-soft); padding: 5px 9px; border-radius: 6px; font-size: 12px; }
+#krushi-root .btn-ghost:hover { background: var(--paper); color: var(--rust); }
+#krushi-root .btn-icon { background: transparent; padding: 5px; border-radius: 6px; display: inline-flex; color: var(--ink-soft); }
+#krushi-root .btn-icon:hover { background: var(--paper); }
+
+#krushi-root input, #krushi-root select {
+  font-family: 'IBM Plex Sans', sans-serif;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 13px;
+  color: var(--ink);
+  width: 100%;
+}
+#krushi-root input:focus, #krushi-root select:focus { outline: 2px solid var(--leaf); outline-offset: 1px; border-color: var(--leaf); }
+
+/* Native number-input spinner arrows overlap the digits once a value goes
+   to 2+ digits in the narrow Qty column — hide them everywhere. */
+#krushi-root input[type=number]::-webkit-outer-spin-button,
+#krushi-root input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#krushi-root input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+#krushi-root label { font-size: 11.5px; font-weight: 600; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 5px; display: block; }
+#krushi-root .field { margin-bottom: 12px; }
+#krushi-root .field-row { display: grid; gap: 12px; }
+
+/* Business Accounts module */
+#krushi-root .acc-tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 18px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+#krushi-root .acc-tab { padding: 7px 13px; border-radius: 7px; font-size: 12.5px; font-weight: 600; color: var(--ink-soft); background: transparent; }
+#krushi-root .acc-tab:hover { background: var(--paper); }
+#krushi-root .acc-tab.active { background: var(--leaf); color: #fff; }
+#krushi-root .acc-summary-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 18px; }
+#krushi-root .acc-summary-grid .stat-card.profit .stat-val { color: var(--leaf-dark); }
+#krushi-root .acc-bank-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 18px; }
+#krushi-root .acc-bank-chip { background: var(--surface); border: 1px solid var(--border); border-radius: 9px; padding: 11px 13px; }
+#krushi-root .acc-bank-chip .bc-name { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-soft); font-weight: 600; margin-bottom: 5px; }
+#krushi-root .acc-bank-chip .bc-val { font-family: 'IBM Plex Mono'; font-size: 16px; font-weight: 600; }
+#krushi-root .tag.cr { background: var(--leaf-pale); color: var(--leaf-dark); }
+#krushi-root .tag.dr { background: var(--rust-pale); color: var(--rust); }
+#krushi-root .tag.auto { background: var(--wheat-pale); color: var(--wheat); }
+#krushi-root .acc-toolbar { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 14px; }
+#krushi-root .acc-toolbar input, #krushi-root .acc-toolbar select { width: auto; }
+
+/* New bill */
+#krushi-root .bill-layout { display: grid; grid-template-columns: 1fr 340px; gap: 18px; align-items: start; }
+#krushi-root .item-row { display: grid; grid-template-columns: 1.5fr 75px 85px 65px 85px 55px 90px 32px; gap: 6px; align-items: end; margin-bottom: 10px; }
+#krushi-root .item-row .field { margin-bottom: 0; }
+#krushi-root .item-row input, #krushi-root .item-row select { padding: 8px 6px; font-size: 12.5px; }
+#krushi-root .item-row .line-total { font-family: 'IBM Plex Mono'; font-size: 13px; text-align: right; padding-top: 9px; color: var(--ink); font-weight: 600; }
+
+/* Receipt */
+#krushi-root .receipt {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  position: relative;
+  padding: 20px 18px 18px 18px;
+}
+#krushi-root .receipt::before {
+  content: '';
+  position: absolute; top: -1px; left: 0; right: 0; height: 8px;
+  background-image: radial-gradient(circle at 8px 4px, var(--paper) 4px, transparent 4.5px);
+  background-size: 16px 8px;
+  background-repeat: repeat-x;
+}
+#krushi-root .receipt-head { text-align: center; padding-bottom: 10px; border-bottom: 1px dashed var(--border); margin-bottom: 10px; }
+#krushi-root .receipt-head .shop-name { font-family: 'Fraunces', serif; font-weight: 700; font-size: 16px; }
+#krushi-root .receipt-head .shop-tag { font-size: 10px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.06em; }
+#krushi-root .receipt-meta { display: flex; justify-content: space-between; font-size: 11px; color: var(--ink-soft); margin-bottom: 10px; }
+#krushi-root .receipt-meta .mono { color: var(--ink); }
+#krushi-root .receipt-line { display: flex; justify-content: space-between; font-size: 12.5px; padding: 4px 0; }
+#krushi-root .receipt-line .item-name { flex: 1; }
+#krushi-root .receipt-line .item-qty { width: 60px; color: var(--ink-soft); font-family: 'IBM Plex Mono'; font-size: 11.5px; }
+#krushi-root .receipt-line .item-amt { width: 70px; text-align: right; font-family: 'IBM Plex Mono'; }
+#krushi-root .receipt-total { display: flex; justify-content: space-between; padding-top: 10px; margin-top: 8px; border-top: 1px dashed var(--border); font-family: 'Fraunces', serif; font-weight: 700; font-size: 16px; }
+#krushi-root .receipt-empty { text-align: center; color: var(--ink-soft); font-size: 12.5px; font-style: italic; padding: 30px 10px; }
+
+/* Modal */
+#krushi-root .overlay { position: fixed; inset: 0; background: rgba(43,43,34,0.45); display: flex; align-items: center; justify-content: center; z-index: 50; }
+#krushi-root .modal { background: var(--surface); border-radius: 10px; padding: 22px 24px; width: 380px; max-width: 90vw; box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
+#krushi-root .modal h3 { font-family: 'Fraunces', serif; margin: 0 0 14px 0; font-size: 16px; }
+#krushi-root .modal-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px; }
+
+#krushi-root .toast {
+  position: absolute; bottom: 18px; right: 18px; background: var(--soil); color: #F7F3EA;
+  padding: 10px 16px; border-radius: 7px; font-size: 12.5px; box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  opacity: 0; transform: translateY(6px); transition: all 0.25s; pointer-events: none; z-index: 60;
+}
+#krushi-root .toast.show { opacity: 1; transform: translateY(0); }
+
+#krushi-root .loading-wrap { display: flex; align-items: center; justify-content: center; height: 100%; color: var(--ink-soft); font-size: 13px; }
+
+/* A4 print invoice (built only when printing) */
+#krushi-print-invoice { display: none; }
+
+@media print {
+  @page { size: A4; margin: 14mm; }
+  body * { visibility: hidden; }
+  #krushi-print-invoice, #krushi-print-invoice * { visibility: visible; }
+  #krushi-print-invoice {
+    display: block;
+    position: absolute; top: 0; left: 0;
+    width: 100%;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #2B2B22;
+  }
+  #krushi-print-invoice .pi-head { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid #3D2B1F; padding-bottom: 14px; margin-bottom: 18px; }
+  #krushi-print-invoice .pi-shop-name { font-family: 'Fraunces', serif; font-size: 26px; font-weight: 700; color: #3D2B1F; }
+  #krushi-print-invoice .pi-shop-tag { font-size: 12px; color: #6B6455; margin-top: 2px; }
+  #krushi-print-invoice .pi-inv-meta { text-align: right; font-size: 12.5px; }
+  #krushi-print-invoice .pi-inv-meta .pi-inv-no { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 700; color: #3D2B1F; }
+  #krushi-print-invoice .pi-parties { display: flex; justify-content: space-between; margin-bottom: 22px; font-size: 12.5px; }
+  #krushi-print-invoice .pi-parties .pi-label { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.05em; color: #6B6455; margin-bottom: 4px; }
+  #krushi-print-invoice table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+  #krushi-print-invoice th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; background: #F3E4C8; color: #3D2B1F; padding: 9px 10px; border: 1px solid #E3DCC8; }
+  #krushi-print-invoice td { padding: 9px 10px; border: 1px solid #E3DCC8; font-size: 12.5px; }
+  #krushi-print-invoice td.num, #krushi-print-invoice th.num { text-align: right; font-family: 'IBM Plex Mono', monospace; }
+  #krushi-print-invoice .pi-total-row td { font-family: 'Fraunces', serif; font-weight: 700; font-size: 15px; background: #F7F3EA; }
+  #krushi-print-invoice .pi-footer { display: flex; justify-content: space-between; margin-top: 60px; font-size: 12px; color: #6B6455; }
+  #krushi-print-invoice .pi-sign { text-align: center; }
+  #krushi-print-invoice .pi-sign .line { width: 160px; border-top: 1px solid #2B2B22; margin-top: 40px; padding-top: 4px; }
+  #krushi-print-invoice .pi-note { margin-top: 26px; font-size: 11px; color: #6B6455; border-top: 1px dashed #E3DCC8; padding-top: 10px; }
+}

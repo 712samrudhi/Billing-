@@ -1,0 +1,21 @@
+{
+  "name": "krushi-bill-server",
+  "version": "1.0.0",
+  "description": "Krushi Bill - MySQL backend API (replaces Supabase)",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "seed": "node seed-user.js"
+  },
+  "dependencies": {
+    "express": "^4.21.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "mysql2": "^3.11.4",
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3",
+    "uuid": "^11.0.0"
+  }
+}

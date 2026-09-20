@@ -1,0 +1,129 @@
+<div id="krushi-root" style="display:none">
+  <div class="sidebar">
+    <div class="brand" id="brand-switcher-toggle">
+      <div id="sidebar-brand-icon" style="width:26px;height:26px;flex-shrink:0;display:flex;align-items:center;justify-content:center">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2C12 2 7 6 7 11C7 14 9 16 12 16C15 16 17 14 17 11C17 6 12 2 12 2Z" fill="#C98A3B"/><path d="M12 16V22" stroke="#4A7C59" stroke-width="1.5"/><path d="M12 19C12 19 9 18 8 20" stroke="#4A7C59" stroke-width="1.5" stroke-linecap="round"/><path d="M12 19C12 19 15 18 16 20" stroke="#4A7C59" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div>
+        <div class="brand-text" id="sidebar-brand-name">Krushi Bill</div>
+        <div class="brand-sub" id="sidebar-brand-sub">Agri Billing &amp; Stock</div>
+      </div>
+      <svg class="brand-chevron" id="brand-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      <div class="switcher-panel" id="switcher-panel"></div>
+    </div>
+    <div class="nav-item active" data-view="dashboard">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+      Dashboard
+    </div>
+    <div class="nav-item" data-view="newbill">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M12 12v6M9 15h6"/></svg>
+      New Bill
+    </div>
+    <div class="nav-item" data-view="stock">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 8V21H3V8"/><path d="M1 3h22v5H1z"/><path d="M10 12h4"/></svg>
+      Stock
+    </div>
+    <div class="nav-item" data-view="invoices">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 12h6M9 16h6"/></svg>
+      All Bills
+    </div>
+    <div class="nav-item" data-view="customers">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      Customers
+    </div>
+    <div class="nav-item" data-view="salespersons">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>
+      Sales Team
+    </div>
+    <div class="nav-item" data-view="reports">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 17V9M13 17V5M8 17v-4"/></svg>
+      Reports
+    </div>
+    <div class="nav-item" data-view="accounts">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/><path d="M6 15h4"/></svg>
+      Business Accounts
+    </div>
+    <div class="nav-item" data-view="settings">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      Shop Details
+    </div>
+    <div class="sidebar-foot" id="sync-status">Connecting to database...</div>
+    <div class="nav-item" id="logout-btn" style="display:none;margin-top:4px">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+      Logout
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="topbar">
+      <div>
+        <h1 id="krushi-title">Dashboard</h1>
+        <div class="sub" id="krushi-subtitle">Today's sales and stock overview</div>
+      </div>
+      <div id="krushi-topbar-action"></div>
+    </div>
+    <div class="content" id="krushi-content">
+      <div class="loading-wrap">Loading...</div>
+    </div>
+  </div>
+</div>
+
+<div id="krushi-login" style="display:none">
+  <div class="login-screen">
+    <div class="login-card">
+      <div class="login-brand">
+        <div class="login-logo">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M12 2C12 2 7 6 7 11C7 14 9 16 12 16C15 16 17 14 17 11C17 6 12 2 12 2Z" fill="#C98A3B"/><path d="M12 16V22" stroke="#4A7C59" stroke-width="1.5"/><path d="M12 19C12 19 9 18 8 20" stroke="#4A7C59" stroke-width="1.5" stroke-linecap="round"/><path d="M12 19C12 19 15 18 16 20" stroke="#4A7C59" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <div class="login-brand-name">Krushi Bill</div>
+        <div class="login-brand-sub">Billing &amp; Stock Management</div>
+      </div>
+
+      <div class="login-field">
+        <label>Email</label>
+        <input id="login-email" type="email" placeholder="shop@example.com" autocomplete="username">
+      </div>
+      <div class="login-field">
+        <label>Password</label>
+        <input id="login-password" type="password" placeholder="••••••••" autocomplete="current-password">
+      </div>
+      <div id="login-error" class="login-error" style="display:none"></div>
+      <button class="login-btn" id="login-btn">Login</button>
+      <div class="login-foot">
+        Only your shop's account can access this data.<br>
+        <a href="#" id="show-register-link">New shop? Create an account</a>
+      </div>
+    </div>
+
+    <div class="login-card" id="register-card" style="display:none">
+      <div class="login-brand">
+        <div class="login-logo">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M12 2C12 2 7 6 7 11C7 14 9 16 12 16C15 16 17 14 17 11C17 6 12 2 12 2Z" fill="#C98A3B"/><path d="M12 16V22" stroke="#4A7C59" stroke-width="1.5"/><path d="M12 19C12 19 9 18 8 20" stroke="#4A7C59" stroke-width="1.5" stroke-linecap="round"/><path d="M12 19C12 19 15 18 16 20" stroke="#4A7C59" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <div class="login-brand-name">Krushi Bill</div>
+        <div class="login-brand-sub">Create your shop's account</div>
+      </div>
+
+      <div class="login-field">
+        <label>Email</label>
+        <input id="register-email" type="email" placeholder="shop@example.com" autocomplete="username">
+      </div>
+      <div class="login-field">
+        <label>Password</label>
+        <input id="register-password" type="password" placeholder="At least 6 characters" autocomplete="new-password">
+      </div>
+      <div class="login-field">
+        <label>Confirm password</label>
+        <input id="register-password2" type="password" placeholder="••••••••" autocomplete="new-password">
+      </div>
+      <div id="register-error" class="login-error" style="display:none"></div>
+      <button class="login-btn" id="register-btn">Create account</button>
+      <div class="login-foot">
+        <a href="#" id="show-login-link">Already have an account? Login</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="krushi-toast" class="toast"></div>
+<div id="krushi-print-invoice"></div>
